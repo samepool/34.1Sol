@@ -12,7 +12,7 @@
  * @param {Array} arr
  */
 
-function findMode(){
+function findMode(arr){
     let freqCounter= createFrequencyCounter(arr);
 
     let count = 0;
@@ -30,14 +30,14 @@ function findMode(){
 
 /**
  * @param {Array} numsAsStrings
- * @returns {Arrray|Error}
+ * @returns {Array|Error}
  */
 
 function convertAndValidateNumsArray(numsAsStrings) {
     let result = [];
 
     for (let i = 0; i < numsAsStrings.length; i++) {
-        let valtoNumber = (numsAsStrings[i]);
+        let valtoNumber = Number(numsAsStrings[i]);
 
         if (Number.isNaN(valToNumber)) {
             return new Error(
